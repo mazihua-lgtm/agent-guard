@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-guard"
+version = "0.1.0"
+description = "Read-only security audit for personal AI agents (OpenClaw, Hermes Agent) on your own machine"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+dependencies = []
+keywords = ["security", "audit", "ai-agent", "openclaw", "hermes-agent"]
+
+[project.optional-dependencies]
+yaml = ["PyYAML>=6"]
+
+[project.scripts]
+agent-guard = "agent_guard.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["agent_guard*"]
